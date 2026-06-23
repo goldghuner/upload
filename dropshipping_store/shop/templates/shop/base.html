@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pasif Gelir Mağazası{% endblock %}</title>
+    <!-- Gerekirse CSS dosyalarınızı buraya ekleyebilirsiniz -->
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+</head>
+<body>
+
+    <!-- Üst Bilgi ve Menü (Header & Nav) -->
+    <header>
+        <div class="logo">
+            <a href="{% url 'shop:product_list' %}">Pasif Gelir Mağazası</a>
+        </div>
+        <nav class="cart">
+            <a href="{% url 'shop:cart_detail' %}">Sepetim</a>
+        </nav>
+    </header>
+
+    <!-- Ana İçerik Alanı -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
